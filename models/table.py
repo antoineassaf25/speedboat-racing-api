@@ -1,7 +1,5 @@
-from abc import ABC, abstractmethod
-
- # allows for forward reference
 from __future__ import annotations
+from abc import ABC, abstractmethod
 
 class SQLTable(ABC):
     """
@@ -13,12 +11,13 @@ class SQLTable(ABC):
             from_dict(data: dict): Creates a SQLTable instance into a dictionary, also STATIC
     """
 
+    table_name = ""
+
     @abstractmethod
     def to_dict(self) -> dict:
         pass
     
-
-    @abstractmethod
     @staticmethod
+    @abstractmethod
     def from_dict(data: dict) -> SQLTable:
         pass

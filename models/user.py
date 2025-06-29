@@ -16,6 +16,8 @@ class User(SQLTable):
         is_cpu: bool,
         username: str
     ):
+
+        self.table_name = "users"
         self.user_id = user_id
         self.is_cpu = is_cpu
         self.username = username
