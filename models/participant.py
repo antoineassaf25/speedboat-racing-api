@@ -8,7 +8,7 @@ class Participant(SQLTable):
     Attributes:
         participant_id (int): Primary Key 
         user_id (int): Foreign Key linked to a User's user_id
-        race_id (str): Foreign Key linked to a specific race
+        race_id (int): Foreign Key linked to a specific race
         finish_time (float): how long it took for the racer to complete the race in seconds
         boat_style (str): the style of the boat that is being used in this race
         boat_speed (int): The speed stat of the boat
